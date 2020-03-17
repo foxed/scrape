@@ -35,4 +35,6 @@ for a in a_slang.find_all('a'):
 
 for i in definitions:
     definition = i.text.strip()
-    print definition
+    list = []
+    list.append(definition)
+    print(list)
