@@ -8,18 +8,31 @@ page = response.text
 
 soup = BeautifulSoup(page, 'html.parser')
 
-
-last_links = soup.find(class_="clear")
-last_links.decompose()
+#check if you need this
+#last_links = soup.find(class_="clear")
+#last_links.decompose()
 
 a_slang = soup.find(class_='entry-content')
 
-a_slang_def = a_slang.find_all('p')
+definitions = a_slang.find_all('p')
 
+words = a_slang.find_all('strong')
 
+#delete links at top and bottom of page
 for a in a_slang.find_all('a'):
     a.replaceWithChildren()
 
-for aslang in a_slang_def:
-    print(a_slang.prettify())
+#extract the slang entries and their definitions
+#for slang in a_slang_def:
+ #   print(slang.prettify())
 
+#for i in definitions:
+#    print definitions
+
+#for i in words:
+#    word = i.text.strip()
+#    print word
+
+for i in definitions:
+    definition = i.text.strip()
+    print definition
