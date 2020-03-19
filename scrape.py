@@ -37,4 +37,6 @@ for i in definitions:
     definition = i.text.strip()
     list = []
     list.append(definition)
-    print(list)
+    
+    for n in list:
+        print(n)
