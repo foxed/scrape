@@ -28,11 +28,13 @@ for url in urls:
     word = i.text.strip()
     list.append(word)
 
-    definition = i.next_sibling
-    list.append(definition)
+    print(word)
+    
+  # definition = i.next_sibling
+  #  list.append(definition)
 
-    for n in list:
-      print(n)    
+  #  for n in list:
+  #    print(n)    
 
 #   for i in definitions:
 #    definition = i.text.strip()
